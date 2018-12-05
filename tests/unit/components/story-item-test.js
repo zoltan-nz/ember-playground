@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleFor('component:story-item', 'Integration | Component | story item', {
+moduleForComponent('component:story-item', 'Integration | Component | story item', {
   integration: true
 });
 
