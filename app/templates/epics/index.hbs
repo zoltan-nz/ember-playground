@@ -1,0 +1,20 @@
+<h1>Epics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each model as |epic|}}
+    <tr>
+      <td>{{epic.id}}</td>
+      <td>{{epic.title}}</td>
+    </tr>
+  {{/each}}
+
+
+  </tbody>
+</table>

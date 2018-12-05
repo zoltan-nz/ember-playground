@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('stories', function() {});
+  this.route('epics', function() {});
+  this.route('sprint');
 });
 
 export default Router;

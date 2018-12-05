@@ -1,0 +1,29 @@
+<h1>Stories</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each model as |story|}}
+    <tr>
+      <td>{{story.id}}</td>
+      <td>
+        <p>
+          {{story.title}} <br />
+          <small>{{story.description}}</small>
+        </p>
+      </td>
+      <td>
+        {{#unless story.isAddedToSprint}}
+          <button class="button" onclick={{action 'addToSprint' story}}>Add to Sprint</button>
+        {{/unless}}
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

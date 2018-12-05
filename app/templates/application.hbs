@@ -1,5 +1,30 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<main class="wrapper">
 
-{{outlet}}
+  <nav class="navigation">
+    <section class="container">
+      {{link-to 'GIRA' 'index' class='title float-left'}}
+      <ul class="navigation-list float-right">
+
+        <li class="navigation-item">
+          {{#link-to 'sprint'}}
+            {{fa-icon "shopping-cart pointer" class="navigation-link"}}
+            {{sprintCollector.stories.length}}
+          {{/link-to}}
+        </li>
+
+        <li class="navigation-item">
+          {{link-to 'Epics' 'epics' class='navigation-link'}}
+        </li>
+
+        <li class="navigation-item">
+          {{link-to 'Stories' 'stories' class='navigation-link'}}
+        </li>
+      </ul>
+    </section>
+  </nav>
+
+  <section class="container">
+    {{outlet}}
+  </section>
+
+</main>
