@@ -9,6 +9,8 @@ module('Acceptance | ember playground', function (hooks) {
     await visit('/');
 
     assert.strictEqual(currentURL(), '/');
+    assert.dom('nav').exists();
+    assert.dom('h1').hasText('SuperRentals');
     assert.dom('h2').hasText('Welcome to Super Rentals!');
 
     assert.dom('.jumbo a.button').hasText('About Us');
@@ -21,6 +23,8 @@ module('Acceptance | ember playground', function (hooks) {
     await visit('/about');
 
     assert.strictEqual(currentURL(), '/about');
+    assert.dom('nav').exists();
+    assert.dom('h1').hasText('SuperRentals');
     assert.dom('h2').hasText('About Super Rentals');
 
     assert.dom('.jumbo a.button').hasText('Contact Us');
@@ -33,6 +37,8 @@ module('Acceptance | ember playground', function (hooks) {
     await visit('/getting-in-touch');
 
     assert.strictEqual(currentURL(), '/getting-in-touch');
+    assert.dom('nav').exists();
+    assert.dom('h1').hasText('SuperRentals');
     assert.dom('h2').hasText('Contact Us');
 
     assert.dom('.jumbo a.button').hasText('About');
