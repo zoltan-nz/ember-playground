@@ -56,12 +56,12 @@ module('Acceptance | ember playground', function (hooks) {
     assert.dom('nav a.menu-contact').hasText('Contact');
 
     await click('nav a.menu-about');
-    assert.equal(currentURL(), '/about');
+    assert.strictEqual(currentURL(), '/about');
 
     await click('nav a.menu-contact');
-    assert.equal(currentURL(), '/getting-in-touch');
+    assert.strictEqual(currentURL(), '/getting-in-touch');
 
     await click('nav a.menu-index');
-    assert.equal(currentURL(), '/');
+    assert.strictEqual(currentURL(), '/');
   });
 });
