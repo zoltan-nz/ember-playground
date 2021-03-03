@@ -1,3 +1,11 @@
-<div class='image'>
-  <img ...attributes>
-</div>
+{{#if this.isLarge}}
+  <div class='image'>
+    <img ...attributes>
+    <small>View Smaller</small>
+  </div>
+{{else}}
+  <div class='image'>
+    <img ...attributes>
+    <small>View Larger</small>
+  </div>
+{{/if}}
