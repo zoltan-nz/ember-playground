@@ -6,14 +6,9 @@
 
 <div class='rentals'>
   <div class='results'>
-    <li>
-      <Rental @rental={{@model}}/>
-    </li>
-    <li>
-      <Rental @rental={{@model}}/>
-    </li>
-    <li>
-      <Rental @rental={{@model}}/>
-    </li>
+    {{#each @model as |rental|}}
+      <li>
+        <Rental @rental={{rental}}</li>
+    {{/each}}
   </div>
 </div>
