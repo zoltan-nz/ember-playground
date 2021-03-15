@@ -25,7 +25,7 @@ module('Integration | Component | rental', function (hooks) {
           'This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests.',
       },
     });
-    
+
     await render(hbs`<Rental @rental={{this.rental}} />`);
 
     assert.dom('article').hasClass('rental');
