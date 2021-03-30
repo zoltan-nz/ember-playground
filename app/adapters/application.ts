@@ -4,7 +4,7 @@ import DS from 'ember-data';
 export default class ApplicationAdapter extends JSONAPIAdapter {
   namespace = 'api';
 
-  buildURL(modelName?: string | number | undefined, id?: string | {} | any[] | null | undefined, snapshot?: any[] | DS.Snapshot<string | number> | null | undefined, requestType?: string | undefined, query?: {} | undefined): string {
+  buildURL(modelName?: string | number, id?: string | {} | any[] | null, snapshot?: any[] | DS.Snapshot<string | number> | null, requestType?: string, query?: {}): string {
     return `${super.buildURL(modelName, id, snapshot, requestType, query)}.json`;
   }
 }
